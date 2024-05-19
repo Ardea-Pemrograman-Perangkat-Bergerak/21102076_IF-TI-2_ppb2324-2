@@ -41,46 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCGhqjKUJwsniBW8ENOchBUszIBhisgO2I',
+    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
     appId: '1:240468761740:web:cc9cd9baebd550e80fafa9',
     messagingSenderId: '240468761740',
-    projectId: 'prakflutterfirebase-710df',
-    authDomain: 'prakflutterfirebase-710df.firebaseapp.com',
-    storageBucket: 'prakflutterfirebase-710df.appspot.com',
+    projectId: 'prakflutterfirebase-7dff7',
+    authDomain: 'prakflutterfirebase-7dff7.firebaseapp.com',
+    storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDYybED0UQ04aI_4gNTv5pba9wbCZKir1o',
+    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
     appId: '1:240468761740:android:60c54d8d9d879d1d0fafa9',
     messagingSenderId: '240468761740',
-    projectId: 'prakflutterfirebase-710df',
-    storageBucket: 'prakflutterfirebase-710df.appspot.com',
+    projectId: 'prakflutterfirebase-7dff7',
+    storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA6qzB5cPN9jtXIOvds8Mxp0CicoL6Lfig',
+    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
     appId: '1:240468761740:ios:49cc761b99ca10780fafa9',
     messagingSenderId: '240468761740',
-    projectId: 'prakflutterfirebase-710df',
-    storageBucket: 'prakflutterfirebase-710df.appspot.com',
+    projectId: 'prakflutterfirebase-7dff7',
+    storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
     iosBundleId: 'com.example.firebaseAuth',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA6qzB5cPN9jtXIOvds8Mxp0CicoL6Lfig',
+    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
     appId: '1:240468761740:ios:49cc761b99ca10780fafa9',
     messagingSenderId: '240468761740',
-    projectId: 'prakflutterfirebase-710df',
-    storageBucket: 'prakflutterfirebase-710df.appspot.com',
+    projectId: 'prakflutterfirebase-7dff7',
+    storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
     iosBundleId: 'com.example.firebaseAuth',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCGhqjKUJwsniBW8ENOchBUszIBhisgO2I',
-    appId: '1:240468761740:web:7b1e0948aba2c7cf0fafa9',
+    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
+    appId: '1:240468761740:ios:49cc761b99ca10780fafa9',
     messagingSenderId: '240468761740',
-    projectId: 'prakflutterfirebase-710df',
-    authDomain: 'prakflutterfirebase-710df.firebaseapp.com',
-    storageBucket: 'prakflutterfirebase-710df.appspot.com',
+    projectId: 'prakflutterfirebase-7dff7',
+    authDomain: 'prakflutterfirebase-7dff7.firebaseapp.com',
+    storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
   );
 }
