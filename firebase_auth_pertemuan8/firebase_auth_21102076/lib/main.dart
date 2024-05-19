@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => RegisterCubit()),
       ],
       child: MaterialApp(
-        title: "Praktikum 6",
+        title: "Praktikum 10",
         debugShowCheckedModeBanner: false,
         navigatorKey: NAV_KEY,
         onGenerateRoute: generateRoute,

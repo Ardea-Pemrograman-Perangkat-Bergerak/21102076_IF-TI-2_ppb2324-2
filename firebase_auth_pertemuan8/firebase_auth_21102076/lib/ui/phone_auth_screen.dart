@@ -1,12 +1,9 @@
-// ignore_for_file: library_private_types_in_public_api, avoid_print
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:firebase_auth_21102076/ui/home_screen.dart';
 
 class PhoneAuthScreen extends StatefulWidget {
-  const PhoneAuthScreen({super.key});
-
   @override
   _PhoneAuthScreenState createState() => _PhoneAuthScreenState();
 }
@@ -17,17 +14,24 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
   User? user;
   String verificationID = "";
 
-  final TextEditingController _phoneController = TextEditingController();
-  final TextEditingController _otpController = TextEditingController();
+  TextEditingController _phoneController = TextEditingController();
+  TextEditingController _otpController = TextEditingController();
 
-  void loginWithPhone() async {
+  @override
+  void dispose() {
+    _otpController.dispose();
+    _phoneController.dispose();
+    super.dispose();
+  }
+
+  void LoginWithPhone() async {
     auth.verifyPhoneNumber(
-      phoneNumber: "+62${_phoneController.text}",
+      phoneNumber: "+62" + _phoneController.text,
       timeout: const Duration(seconds: 60),
       verificationCompleted: (PhoneAuthCredential credential) async {
-        await auth.signInWithCredential(credential).then((value) {
-          print("You are logged in successfully");
-        });
+        await auth
+            .signInWithCredential(credential)
+            .then((value) => {print("You are logged in successfully")});
       },
       verificationFailed: (FirebaseAuthException e) {
         print(e.message);
@@ -44,38 +48,30 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
   void verifyOTP() async {
     PhoneAuthCredential credential = PhoneAuthProvider.credential(
         verificationId: verificationID, smsCode: _otpController.text);
+
     await auth.signInWithCredential(credential).then(
       (value) {
         setState(() {
           user = FirebaseAuth.instance.currentUser;
         });
       },
-    ).whenComplete(
-      () {
-        if (user != null) {
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(const SnackBar(content: Text('Berhasil Login')));
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
-            ),
-          );
-        } else {
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(const SnackBar(content: Text('Login Gagal')));
-        }
-      },
-    );
-  }
-
-  @override
-  void dispose() {
-    _phoneController.dispose();
-    _otpController.dispose();
-    super.dispose();
+    ).whenComplete(() {
+      if (user != null) {
+        ScaffoldMessenger.of(context)
+          ..hideCurrentSnackBar()
+          ..showSnackBar(const SnackBar(content: Text('Berhasil Login')));
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomeScreen(),
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context)
+          ..hideCurrentSnackBar()
+          ..showSnackBar(const SnackBar(content: Text('Login Gagal')));
+      }
+    });
   }
 
   @override
@@ -89,19 +85,26 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
             TextField(
               controller: _phoneController,
               decoration: const InputDecoration(
-                prefix: Padding(padding: EdgeInsets.all(4), child: Text('+62')),
-              ),
-              keyboardType: TextInputType.phone,
+                  hintText: 'Masukkan nomor telepon anda',
+                  prefix: Padding(
+                    padding: EdgeInsets.all(4),
+                    child: Text('+62'),
+                  )),
+              keyboardType: TextInputType.number,
             ),
             Visibility(
-              visible: otpVisibility,
-              child: const TextField(
-                decoration: InputDecoration(
-                  hintText: 'OTP',
-                  prefix: Padding(padding: EdgeInsets.all(4), child: Text('')),
-                ),
+              // ignore: sort_child_properties_last
+              child: TextField(
+                controller: _otpController,
+                decoration: const InputDecoration(
+                    hintText: 'OTP',
+                    prefix: Padding(
+                      padding: EdgeInsets.all(4),
+                      child: Text(''),
+                    )),
                 keyboardType: TextInputType.number,
               ),
+              visible: otpVisibility,
             ),
             const SizedBox(
               height: 10,
@@ -113,12 +116,14 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
                   if (otpVisibility) {
                     verifyOTP();
                   } else {
-                    loginWithPhone();
+                    LoginWithPhone();
                   }
                 }
               },
-              child: Text(otpVisibility ? "Verify" : "Login",
-                  style: const TextStyle(color: Colors.white, fontSize: 20)),
+              child: Text(
+                otpVisibility ? "Verify" : "Login",
+                style: const TextStyle(color: Colors.white, fontSize: 20),
+              ),
             ),
           ],
         ),

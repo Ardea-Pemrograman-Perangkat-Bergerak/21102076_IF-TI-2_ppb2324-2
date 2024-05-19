@@ -42,45 +42,52 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
-    appId: '1:240468761740:web:cc9cd9baebd550e80fafa9',
-    messagingSenderId: '240468761740',
+    appId: '1:848490235129:web:adfe9c1b68cb058942ce28',
+    messagingSenderId: '848490235129',
     projectId: 'prakflutterfirebase-7dff7',
     authDomain: 'prakflutterfirebase-7dff7.firebaseapp.com',
+    databaseURL: 'https://prakflutterfirebase-7dff7-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
-    appId: '1:240468761740:android:60c54d8d9d879d1d0fafa9',
-    messagingSenderId: '240468761740',
+    apiKey: 'AIzaSyBLlUIPgaeIPRIMak2doZmvw81iQZeGgR8',
+    appId: '1:848490235129:android:9ef1eb11f89172a842ce28',
+    messagingSenderId: '848490235129',
     projectId: 'prakflutterfirebase-7dff7',
+    databaseURL: 'https://prakflutterfirebase-7dff7-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
-    appId: '1:240468761740:ios:49cc761b99ca10780fafa9',
-    messagingSenderId: '240468761740',
+    apiKey: 'AIzaSyCljKlssbKPwl6-EZ4oNrZMTrAMPZZ6WfE',
+    appId: '1:848490235129:ios:df8c49736f5f040a42ce28',
+    messagingSenderId: '848490235129',
     projectId: 'prakflutterfirebase-7dff7',
+    databaseURL: 'https://prakflutterfirebase-7dff7-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
+    iosClientId: '848490235129-kjb8cgpvr4iqh0dlg1fbq41macpi0ik7.apps.googleusercontent.com',
     iosBundleId: 'com.example.firebaseAuth',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
-    appId: '1:240468761740:ios:49cc761b99ca10780fafa9',
-    messagingSenderId: '240468761740',
+    apiKey: 'AIzaSyCljKlssbKPwl6-EZ4oNrZMTrAMPZZ6WfE',
+    appId: '1:848490235129:ios:df8c49736f5f040a42ce28',
+    messagingSenderId: '848490235129',
     projectId: 'prakflutterfirebase-7dff7',
+    databaseURL: 'https://prakflutterfirebase-7dff7-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
+    iosClientId: '848490235129-kjb8cgpvr4iqh0dlg1fbq41macpi0ik7.apps.googleusercontent.com',
     iosBundleId: 'com.example.firebaseAuth',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyAckJCz4OrVoYr5C1tsssmhKC19iY-D9XY',
-    appId: '1:240468761740:ios:49cc761b99ca10780fafa9',
-    messagingSenderId: '240468761740',
+    appId: '1:848490235129:web:9dbacc265c8bdc6d42ce28',
+    messagingSenderId: '848490235129',
     projectId: 'prakflutterfirebase-7dff7',
     authDomain: 'prakflutterfirebase-7dff7.firebaseapp.com',
+    databaseURL: 'https://prakflutterfirebase-7dff7-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'prakflutterfirebase-7dff7.appspot.com',
   );
 }
