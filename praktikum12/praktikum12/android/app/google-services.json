@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "322120928912",
+    "project_id": "praktikum9-919fd",
+    "storage_bucket": "praktikum9-919fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322120928912:android:2c3988e16f741902889215",
+        "android_client_info": {
+          "package_name": "com.example.paktikum9"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322120928912-oo3sbglf42jtfds5o0jk67vq5m7hj7nk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.paktikum9",
+            "certificate_hash": "5e9ed6b8d48a7b8218a107f979abf22b8318d253"
+          }
+        },
+        {
+          "client_id": "322120928912-vqa665qleri044399lstvqjrgbpd8q03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb16u-8p1mDttFFNe8EYJ9Gxy3_pw7Rzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322120928912-vqa665qleri044399lstvqjrgbpd8q03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "322120928912-lvj3d6g9ak6rp7a8ealcuu0hu6ahk3tb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.paktikum9"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
